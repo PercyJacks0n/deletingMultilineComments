@@ -1,0 +1,79 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-Debug-0fe045701aff2206d988.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "deletingMultilineComments",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "deletingMultilineComments::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-deletingMultilineComments-Debug-4d4ff2985cf6761b1721.json",
+					"name" : "deletingMultilineComments",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "deletingMultilineComments_autogen::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-deletingMultilineComments_autogen-Debug-c503d62f3a0c9087b75f.json",
+					"name" : "deletingMultilineComments_autogen",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "deletingMultilineComments_autogen_timestamp_deps::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-deletingMultilineComments_autogen_timestamp_deps-Debug-7056150576d2181ebd7d.json",
+					"name" : "deletingMultilineComments_autogen_timestamp_deps",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "D:/OP/deletingMultilineComments/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug",
+		"source" : "D:/OP/deletingMultilineComments"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 7
+	}
+}

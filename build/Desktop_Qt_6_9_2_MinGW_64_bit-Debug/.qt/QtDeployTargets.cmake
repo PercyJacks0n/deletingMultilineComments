@@ -1,0 +1,3 @@
+set(__QT_DEPLOY_TARGET_deletingMultilineComments_FILE D:/OP/deletingMultilineComments/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/deletingMultilineComments.exe)
+set(__QT_DEPLOY_TARGET_deletingMultilineComments_TYPE EXECUTABLE)
+set(__QT_DEPLOY_TARGET_deletingMultilineComments_RUNTIME_DLLS D:/Clixe/6.9.2/mingw_64/bin/Qt6Core.dll)

@@ -15,9 +15,10 @@ find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Core)
 add_executable(deletingMultilineComments
   main.cpp
   ErrorType.h
-  LocationsFlagsInCode.h
+  LocationFlagInCode.h
   Error.h
   error.cpp
+  Functions.h
 )
 target_link_libraries(deletingMultilineComments Qt${QT_VERSION_MAJOR}::Core)
 

@@ -16,6 +16,8 @@ add_executable(deletingMultilineComments
   main.cpp
   ErrorType.h
   LocationsFlagsInCode.h
+  Error.h
+  error.cpp
 )
 target_link_libraries(deletingMultilineComments Qt${QT_VERSION_MAJOR}::Core)
 

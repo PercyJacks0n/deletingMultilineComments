@@ -20,6 +20,7 @@ add_executable(deletingMultilineComments
   error.cpp
   Functions.h
   checkCountArgs.cpp
+  checkExtension.cpp
 )
 target_link_libraries(deletingMultilineComments Qt${QT_VERSION_MAJOR}::Core)
 

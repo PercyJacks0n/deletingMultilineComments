@@ -5,7 +5,7 @@
 void findingEnteringOtherStatusFlags(const QString & inputCode,
                                      int & i,
                                      QString & result,
-                                     LocationFlagsInCode & state,
+                                     LocationFlagInCode & state,
                                      int & countDirective,
                                      QString & directive)
 {

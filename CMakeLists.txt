@@ -31,6 +31,7 @@ add_executable(deletingMultilineComments
   findingEnteringOtherStatusFlags.cpp
   findingEndMultiLineComment.cpp
   writingOneLineComment.cpp
+  writingStringConstant.cpp
 )
 target_link_libraries(deletingMultilineComments Qt${QT_VERSION_MAJOR}::Core)
 

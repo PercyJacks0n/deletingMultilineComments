@@ -2,7 +2,7 @@
 #include "Functions.h"
 #include "LocationFlagInCode.h"
 
-void findingEndMultiLineComment(const QString & inputCode, int & i, LocationFlagsInCode & state)
+void findingEndMultiLineComment(const QString & inputCode, int & i, LocationFlagInCode & state)
 {
 
 }

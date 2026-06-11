@@ -26,6 +26,7 @@ add_executable(deletingMultilineComments
   checkPresenceOfDirective.cpp
   createOutputFile.cpp
   printErrorMessage.cpp
+  isQuoteEscaped.cpp
 )
 target_link_libraries(deletingMultilineComments Qt${QT_VERSION_MAJOR}::Core)
 

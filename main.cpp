@@ -1,19 +1,32 @@
-#include <QCoreApplication>
+#include <QString>
+#include <QList>
+#include "Functions.h"
+#include <qDebug>
 
 int main(int argc, char *argv[])
 {
-    QCoreApplication a(argc, argv);
+    setlocale(LC_ALL, "Russian");
 
-    // Set up code that uses the Qt event loop here.
-    // Call a.quit() or a.exit() to quit the application.
-    // A not very useful example would be including
-    // #include <QTimer>
-    // near the top of the file and calling
-    // QTimer::singleShot(5000, &a, &QCoreApplication::quit);
-    // which quits the application after 5 seconds.
+    QString inputPath = (argc > 1) ? argv[1] : "";
+    QString outputPath = (argc > 2) ? argv[2] : "";
 
-    // If you do not need a running Qt event loop, remove the call
-    // to a.exec() or use the Non-Qt Plain C++ Application template.
+    QList<Error> errors;
+    QList<QString> allowedExtensions = {"cpp", "c", "h"};
 
-    return a.exec();
+
+    checkCountArgs(argc, errors);
+    checkExtension(inputPath, allowedExtensions, errors);
+    if (!hasNoErrors(errors)) return 1;
+
+    QString inputCode = readInputFile(inputPath, errors);
+    if (!hasNoErrors(errors)) return 1;
+
+    checkSizeOfFile(inputCode, errors);
+    if (!hasNoErrors(errors)) return 1;
+
+    QString processedCode = removeMultiLineComment(inputCode, errors);
+    createOutputFile(processedCode, outputPath, errors);
+    if (!hasNoErrors(errors)) return 1;
+
+    return 0;
 }

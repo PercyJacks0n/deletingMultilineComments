@@ -29,6 +29,7 @@ add_executable(deletingMultilineComments
   isQuoteEscaped.cpp
   removeMultiLineComment.cpp
   findingEnteringOtherStatusFlags.cpp
+  findingEndMultiLineComment.cpp
 )
 target_link_libraries(deletingMultilineComments Qt${QT_VERSION_MAJOR}::Core)
 

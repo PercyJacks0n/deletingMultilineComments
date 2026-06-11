@@ -23,6 +23,7 @@ add_executable(deletingMultilineComments
   checkExtension.cpp
   readInputFile.cpp
   checkSizeOfFile.cpp
+  checkPresenceOfDirective.cpp
 )
 target_link_libraries(deletingMultilineComments Qt${QT_VERSION_MAJOR}::Core)
 

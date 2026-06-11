@@ -32,6 +32,9 @@ add_executable(deletingMultilineComments
   findingEndMultiLineComment.cpp
   writingOneLineComment.cpp
   writingStringConstant.cpp
+  writingSymbolicConstant.cpp
+
+
 )
 target_link_libraries(deletingMultilineComments Qt${QT_VERSION_MAJOR}::Core)
 

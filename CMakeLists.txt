@@ -21,6 +21,7 @@ add_executable(deletingMultilineComments
   Functions.h
   checkCountArgs.cpp
   checkExtension.cpp
+  readInputFile.cpp
 )
 target_link_libraries(deletingMultilineComments Qt${QT_VERSION_MAJOR}::Core)
 

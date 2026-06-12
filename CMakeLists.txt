@@ -33,6 +33,7 @@ add_executable(deletingMultilineComments
   writingOneLineComment.cpp
   writingStringConstant.cpp
   writingSymbolicConstant.cpp
+  hasNoErrors.cpp
 
 )
 

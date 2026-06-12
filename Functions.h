@@ -21,17 +21,17 @@ QString removeMultiLineComment(const QString & inputCode, QList<Error> & errors)
 void findingEnteringOtherStatusFlags(const QString & inputCode,
                                      int & i,
                                      QString & result,
-                                     LocationFlagsInCode & state,
+                                     LocationFlagInCode & state,
                                      int & countDirective,
                                      QString & directive);
 
-void findingEndMultiLineComment(const QString & inputCode, int & i, LocationFlagsInCode & state);
+void findingEndMultiLineComment(const QString & inputCode, int & i, LocationFlagInCode & state);
 
-void writingOneLineComment(const QString & inputCode, int & i, QString & result, LocationFlagsInCode & state);
+void writingOneLineComment(const QString & inputCode, int & i, QString & result, LocationFlagInCode & state);
 
-void writingStringConstant(const QString & inputCode, int & i, QString & result, LocationFlagsInCode & state);
+void writingStringConstant(const QString & inputCode, int & i, QString & result, LocationFlagInCode & state);
 
-void writingSymbolicConstant(const QString & inputCode, int & i, QString & result, LocationFlagsInCode & state);
+void writingSymbolicConstant(const QString & inputCode, int & i, QString & result, LocationFlagInCode & state);
 
 bool isQuoteEscaped(const QString & code, int pos);
 

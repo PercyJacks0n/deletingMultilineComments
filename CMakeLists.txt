@@ -34,8 +34,8 @@ add_executable(deletingMultilineComments
   writingStringConstant.cpp
   writingSymbolicConstant.cpp
 
-
 )
+
 target_link_libraries(deletingMultilineComments Qt${QT_VERSION_MAJOR}::Core)
 
 include(GNUInstallDirs)
@@ -43,3 +43,13 @@ install(TARGETS deletingMultilineComments
     LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}
     RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR}
 )
+
+find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Core Test)
+################################################################################################
+add_executable(test_isQuoteEscaped
+    tests/test_isQuoteEscaped.cpp
+    isQuoteEscaped.cpp
+)
+
+target_link_libraries(test_isQuoteEscaped Qt${QT_VERSION_MAJOR}::Test)
+target_include_directories(test_isQuoteEscaped PRIVATE ${CMAKE_CURRENT_SOURCE_DIR})

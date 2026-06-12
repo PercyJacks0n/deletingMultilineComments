@@ -54,3 +54,12 @@ add_executable(test_isQuoteEscaped
 
 target_link_libraries(test_isQuoteEscaped Qt${QT_VERSION_MAJOR}::Test)
 target_include_directories(test_isQuoteEscaped PRIVATE ${CMAKE_CURRENT_SOURCE_DIR})
+#################################################################################################
+add_executable(test_printErrorMessage
+    tests/test_printErrorMessage.cpp
+    printErrorMessage.cpp
+    error.cpp
+)
+
+target_link_libraries(test_printErrorMessage Qt${QT_VERSION_MAJOR}::Test)
+target_include_directories(test_printErrorMessage PRIVATE ${CMAKE_CURRENT_SOURCE_DIR})

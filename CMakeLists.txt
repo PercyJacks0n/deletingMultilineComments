@@ -191,3 +191,20 @@ add_executable(test_findingEnteringOtherStatusFlags
 
 target_link_libraries(test_findingEnteringOtherStatusFlags Qt${QT_VERSION_MAJOR}::Test)
 target_include_directories(test_findingEnteringOtherStatusFlags PRIVATE ${CMAKE_CURRENT_SOURCE_DIR})
+
+#################################################################################################
+
+add_executable(test_removeMultiLineComment
+    tests/test_removeMultiLineComment.cpp
+    removeMultiLineComment.cpp
+    checkPresenceOfDirective.cpp
+    findingEnteringOtherStatusFlags.cpp
+    findingEndMultiLineComment.cpp
+    writingOneLineComment.cpp
+    writingStringConstant.cpp
+    writingSymbolicConstant.cpp
+    isQuoteEscaped.cpp
+)
+
+target_link_libraries(test_removeMultiLineComment Qt${QT_VERSION_MAJOR}::Test)
+target_include_directories(test_removeMultiLineComment PRIVATE ${CMAKE_CURRENT_SOURCE_DIR})

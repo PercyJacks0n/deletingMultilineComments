@@ -160,3 +160,13 @@ add_executable(test_writingSymbolicConstant
 
 target_link_libraries(test_writingSymbolicConstant Qt${QT_VERSION_MAJOR}::Test)
 target_include_directories(test_writingSymbolicConstant PRIVATE ${CMAKE_CURRENT_SOURCE_DIR})
+
+#################################################################################################
+
+add_executable(test_writingOneLineComment
+    tests/test_writingOneLineComment.cpp
+    writingOneLineComment.cpp
+)
+
+target_link_libraries(test_writingOneLineComment Qt${QT_VERSION_MAJOR}::Test)
+target_include_directories(test_writingOneLineComment PRIVATE ${CMAKE_CURRENT_SOURCE_DIR})

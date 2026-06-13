@@ -149,3 +149,14 @@ add_executable(test_writingStringConstant
 
 target_link_libraries(test_writingStringConstant Qt${QT_VERSION_MAJOR}::Test)
 target_include_directories(test_writingStringConstant PRIVATE ${CMAKE_CURRENT_SOURCE_DIR})
+
+#################################################################################################
+
+add_executable(test_writingSymbolicConstant
+    tests/test_writingSymbolicConstant.cpp
+    writingSymbolicConstant.cpp
+    isQuoteEscaped.cpp
+)
+
+target_link_libraries(test_writingSymbolicConstant Qt${QT_VERSION_MAJOR}::Test)
+target_include_directories(test_writingSymbolicConstant PRIVATE ${CMAKE_CURRENT_SOURCE_DIR})

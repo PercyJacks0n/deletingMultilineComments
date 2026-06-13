@@ -170,3 +170,13 @@ add_executable(test_writingOneLineComment
 
 target_link_libraries(test_writingOneLineComment Qt${QT_VERSION_MAJOR}::Test)
 target_include_directories(test_writingOneLineComment PRIVATE ${CMAKE_CURRENT_SOURCE_DIR})
+
+#################################################################################################
+
+add_executable(test_findingEndMultiLineComment
+    tests/test_findingEndMultiLineComment.cpp
+    findingEndMultiLineComment.cpp
+)
+
+target_link_libraries(test_findingEndMultiLineComment Qt${QT_VERSION_MAJOR}::Test)
+target_include_directories(test_findingEndMultiLineComment PRIVATE ${CMAKE_CURRENT_SOURCE_DIR})

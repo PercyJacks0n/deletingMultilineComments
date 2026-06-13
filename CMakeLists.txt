@@ -74,3 +74,12 @@ add_executable(test_hasNoErrors
 
 target_link_libraries(test_hasNoErrors Qt${QT_VERSION_MAJOR}::Test)
 target_include_directories(test_hasNoErrors PRIVATE ${CMAKE_CURRENT_SOURCE_DIR})
+
+#################################################################################################
+add_executable(test_checkCountArgs
+    tests/test_checkCountArgs.cpp
+    checkCountArgs.cpp
+)
+
+target_link_libraries(test_checkCountArgs Qt${QT_VERSION_MAJOR}::Test)
+target_include_directories(test_checkCountArgs PRIVATE ${CMAKE_CURRENT_SOURCE_DIR})

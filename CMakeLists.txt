@@ -129,3 +129,13 @@ add_executable(test_createOutputFile
 target_link_libraries(test_createOutputFile Qt${QT_VERSION_MAJOR}::Test)
 target_include_directories(test_createOutputFile PRIVATE ${CMAKE_CURRENT_SOURCE_DIR})
 
+#################################################################################################
+
+add_executable(test_generateErrorMessage
+    tests/test_errorMessage.cpp
+    error.cpp
+)
+
+target_link_libraries(test_generateErrorMessage Qt${QT_VERSION_MAJOR}::Test)
+target_include_directories(test_generateErrorMessage PRIVATE ${CMAKE_CURRENT_SOURCE_DIR})
+

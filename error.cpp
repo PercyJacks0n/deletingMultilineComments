@@ -37,7 +37,7 @@ QString Error::generateErrorMessage() const
 
     case numberCharactersPerLineExceeded:
 
-        return "Превышена длина строкиб 1000 символов в строках:" + generateListLineNumbersExceededCharacterLimit();
+        return "Превышена длина строки 1000 символов в строках:" + generateListLineNumbersExceededCharacterLimit();
 
     default:
         return "Неизвестная ошибка";

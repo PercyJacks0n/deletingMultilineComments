@@ -110,3 +110,12 @@ add_executable(test_checkSizeOfFile
 
 target_link_libraries(test_checkSizeOfFile Qt${QT_VERSION_MAJOR}::Test)
 target_include_directories(test_checkSizeOfFile PRIVATE ${CMAKE_CURRENT_SOURCE_DIR})
+
+#################################################################################################
+add_executable(test_checkPresenceOfDirective
+    tests/test_checkPresenceOfDirective.cpp
+    checkPresenceOfDirective.cpp
+)
+
+target_link_libraries(test_checkPresenceOfDirective Qt${QT_VERSION_MAJOR}::Test)
+target_include_directories(test_checkPresenceOfDirective PRIVATE ${CMAKE_CURRENT_SOURCE_DIR})

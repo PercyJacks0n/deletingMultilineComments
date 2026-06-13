@@ -92,3 +92,12 @@ add_executable(test_checkExtension
 
 target_link_libraries(test_checkExtension Qt${QT_VERSION_MAJOR}::Test)
 target_include_directories(test_checkExtension PRIVATE ${CMAKE_CURRENT_SOURCE_DIR})
+
+#################################################################################################
+add_executable(test_readInputFile
+    tests/test_readInputFile.cpp
+    readInputFile.cpp
+)
+
+target_link_libraries(test_readInputFile Qt${QT_VERSION_MAJOR}::Test)
+target_include_directories(test_readInputFile PRIVATE ${CMAKE_CURRENT_SOURCE_DIR})

@@ -139,3 +139,13 @@ add_executable(test_generateErrorMessage
 target_link_libraries(test_generateErrorMessage Qt${QT_VERSION_MAJOR}::Test)
 target_include_directories(test_generateErrorMessage PRIVATE ${CMAKE_CURRENT_SOURCE_DIR})
 
+#################################################################################################
+
+add_executable(test_writingStringConstant
+    tests/test_writingStringConstant.cpp
+    writingStringConstant.cpp
+    isQuoteEscaped.cpp
+)
+
+target_link_libraries(test_writingStringConstant Qt${QT_VERSION_MAJOR}::Test)
+target_include_directories(test_writingStringConstant PRIVATE ${CMAKE_CURRENT_SOURCE_DIR})

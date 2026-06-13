@@ -63,3 +63,14 @@ add_executable(test_printErrorMessage
 
 target_link_libraries(test_printErrorMessage Qt${QT_VERSION_MAJOR}::Test)
 target_include_directories(test_printErrorMessage PRIVATE ${CMAKE_CURRENT_SOURCE_DIR})
+
+#################################################################################################
+add_executable(test_hasNoErrors
+    tests/test_hasNoErrors.cpp
+    hasNoErrors.cpp
+    printErrorMessage.cpp
+    error.cpp
+)
+
+target_link_libraries(test_hasNoErrors Qt${QT_VERSION_MAJOR}::Test)
+target_include_directories(test_hasNoErrors PRIVATE ${CMAKE_CURRENT_SOURCE_DIR})

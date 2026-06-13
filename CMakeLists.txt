@@ -180,3 +180,14 @@ add_executable(test_findingEndMultiLineComment
 
 target_link_libraries(test_findingEndMultiLineComment Qt${QT_VERSION_MAJOR}::Test)
 target_include_directories(test_findingEndMultiLineComment PRIVATE ${CMAKE_CURRENT_SOURCE_DIR})
+
+#################################################################################################
+add_executable(test_findingEnteringOtherStatusFlags
+    tests/test_findingEnteringOtherStatusFlags.cpp
+    findingEnteringOtherStatusFlags.cpp
+    isQuoteEscaped.cpp
+    checkPresenceOfDirective.cpp
+)
+
+target_link_libraries(test_findingEnteringOtherStatusFlags Qt${QT_VERSION_MAJOR}::Test)
+target_include_directories(test_findingEnteringOtherStatusFlags PRIVATE ${CMAKE_CURRENT_SOURCE_DIR})

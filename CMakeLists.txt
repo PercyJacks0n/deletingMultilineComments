@@ -119,3 +119,13 @@ add_executable(test_checkPresenceOfDirective
 
 target_link_libraries(test_checkPresenceOfDirective Qt${QT_VERSION_MAJOR}::Test)
 target_include_directories(test_checkPresenceOfDirective PRIVATE ${CMAKE_CURRENT_SOURCE_DIR})
+
+#################################################################################################
+add_executable(test_createOutputFile
+    tests/test_createOutputFile.cpp
+    createOutputFile.cpp
+)
+
+target_link_libraries(test_createOutputFile Qt${QT_VERSION_MAJOR}::Test)
+target_include_directories(test_createOutputFile PRIVATE ${CMAKE_CURRENT_SOURCE_DIR})
+

@@ -32,6 +32,7 @@ private slots:
     void test_lineCommentWithBlockInside();
     void test_mixedLineAndBlock();
     void test_complexExample();
+    void test_defineDirectiveError();
 };
 
 void TestRemoveMultiLineComment::test_noComments()
@@ -647,6 +648,26 @@ void TestRemoveMultiLineComment::test_complexExample()
     QString result = removeMultiLineComment(input, errors);
     QCOMPARE(result, expected);
     QCOMPARE(errors.size(), 0);
+}
+
+void TestRemoveMultiLineComment::test_defineDirectiveError()
+{
+    QString input =
+        "#define MAX 100\n"
+        "int main() {\n"
+        "    int a = MAX;\n"
+        "    return 0;\n"
+        "}\n";
+
+    QList<Error> errors;
+
+    QString result = removeMultiLineComment(input, errors);
+
+    QCOMPARE(errors.size(), 1);
+    QCOMPARE(errors[0].type, defineDirectiveFound);
+    QCOMPARE(errors[0].actualCount, 1);
+
+    QCOMPARE(result, input);
 }
 
 QTEST_MAIN(TestRemoveMultiLineComment)

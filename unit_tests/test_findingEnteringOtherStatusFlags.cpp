@@ -12,6 +12,12 @@ private slots:
     void test_startLineComment();
     void test_startString();
     void test_startChar();
+    void test_directiveDefine();
+    void test_emptyString();
+    void test_hashWithoutDefine();
+    void test_directiveWithSpaces();
+    void test_multipleDirectives();
+    void test_commentAfterDirective();
 };
 
 void TestFindingEnteringOtherStatusFlags::test_normalText()
@@ -91,6 +97,92 @@ void TestFindingEnteringOtherStatusFlags::test_startChar()
     QCOMPARE(result, QString("'"));
     QCOMPARE(state, flagSymbolicConstant);
     QCOMPARE(i, 1);
+}
+
+void TestFindingEnteringOtherStatusFlags::test_directiveDefine()
+{
+    QString input = "#define MAX 100";
+    QString result;
+    LocationFlagInCode state = flagOuterCode;
+    int i = 0;
+    int countDirective = 0;
+    QString directive = "define";
+
+    findingEnteringOtherStatusFlags(input, i, result, state, countDirective, directive);
+
+    QCOMPARE(countDirective, 1);
+}
+
+void TestFindingEnteringOtherStatusFlags::test_emptyString()
+{
+    QString input = "";
+    QString result;
+    LocationFlagInCode state = flagOuterCode;
+    int i = 0;
+    int countDirective = 0;
+    QString directive = "define";
+
+    findingEnteringOtherStatusFlags(input, i, result, state, countDirective, directive);
+
+    QCOMPARE(state, flagOuterCode);
+}
+
+void TestFindingEnteringOtherStatusFlags::test_hashWithoutDefine()
+{
+    QString input = "#include <iostream>";
+    QString result;
+    LocationFlagInCode state = flagOuterCode;
+    int i = 0;
+    int countDirective = 0;
+    QString directive = "define";
+
+    findingEnteringOtherStatusFlags(input, i, result, state, countDirective, directive);
+
+    QCOMPARE(countDirective, 0);
+}
+
+void TestFindingEnteringOtherStatusFlags::test_directiveWithSpaces()
+{
+    QString input = "#  define MAX 100";
+    QString result;
+    LocationFlagInCode state = flagOuterCode;
+    int i = 0;
+    int countDirective = 0;
+    QString directive = "define";
+
+    findingEnteringOtherStatusFlags(input, i, result, state, countDirective, directive);
+
+    QCOMPARE(countDirective, 1);
+}
+
+void TestFindingEnteringOtherStatusFlags::test_multipleDirectives()
+{
+    QString input = "#define MAX 100\n#define MIN 0";
+    QString result;
+    LocationFlagInCode state = flagOuterCode;
+    int i = 0;
+    int countDirective = 0;
+    QString directive = "define";
+
+    while (i < input.length()) {
+        findingEnteringOtherStatusFlags(input, i, result, state, countDirective, directive);
+    }
+
+    QCOMPARE(countDirective, 2);
+}
+
+void TestFindingEnteringOtherStatusFlags::test_commentAfterDirective()
+{
+    QString input = "#define MAX 100 /* comment */";
+    QString result;
+    LocationFlagInCode state = flagOuterCode;
+    int i = 0;
+    int countDirective = 0;
+    QString directive = "define";
+
+    findingEnteringOtherStatusFlags(input, i, result, state, countDirective, directive);
+
+    QCOMPARE(countDirective, 1);
 }
 
 QTEST_MAIN(TestFindingEnteringOtherStatusFlags)

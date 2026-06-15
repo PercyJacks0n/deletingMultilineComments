@@ -48,7 +48,7 @@ install(TARGETS deletingMultilineComments
 find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Core Test)
 ################################################################################################
 add_executable(test_isQuoteEscaped
-    tests/test_isQuoteEscaped.cpp
+    unit_tests/test_isQuoteEscaped.cpp
     isQuoteEscaped.cpp
 )
 
@@ -56,7 +56,7 @@ target_link_libraries(test_isQuoteEscaped Qt${QT_VERSION_MAJOR}::Test)
 target_include_directories(test_isQuoteEscaped PRIVATE ${CMAKE_CURRENT_SOURCE_DIR})
 #################################################################################################
 add_executable(test_printErrorMessage
-    tests/test_printErrorMessage.cpp
+    unit_tests/test_printErrorMessage.cpp
     printErrorMessage.cpp
     error.cpp
 )
@@ -66,7 +66,7 @@ target_include_directories(test_printErrorMessage PRIVATE ${CMAKE_CURRENT_SOURCE
 
 #################################################################################################
 add_executable(test_hasNoErrors
-    tests/test_hasNoErrors.cpp
+    unit_tests/test_hasNoErrors.cpp
     hasNoErrors.cpp
     printErrorMessage.cpp
     error.cpp
@@ -77,7 +77,7 @@ target_include_directories(test_hasNoErrors PRIVATE ${CMAKE_CURRENT_SOURCE_DIR})
 
 #################################################################################################
 add_executable(test_checkCountArgs
-    tests/test_checkCountArgs.cpp
+    unit_tests/test_checkCountArgs.cpp
     checkCountArgs.cpp
 )
 
@@ -86,7 +86,7 @@ target_include_directories(test_checkCountArgs PRIVATE ${CMAKE_CURRENT_SOURCE_DI
 
 #################################################################################################
 add_executable(test_checkExtension
-    tests/test_checkExtension.cpp
+    unit_tests/test_checkExtension.cpp
     checkExtension.cpp
 )
 
@@ -95,7 +95,7 @@ target_include_directories(test_checkExtension PRIVATE ${CMAKE_CURRENT_SOURCE_DI
 
 #################################################################################################
 add_executable(test_readInputFile
-    tests/test_readInputFile.cpp
+    unit_tests/test_readInputFile.cpp
     readInputFile.cpp
 )
 
@@ -104,7 +104,7 @@ target_include_directories(test_readInputFile PRIVATE ${CMAKE_CURRENT_SOURCE_DIR
 
 #################################################################################################
 add_executable(test_checkSizeOfFile
-    tests/test_checkSizeOfFile.cpp
+    unit_tests/test_checkSizeOfFile.cpp
     checkSizeOfFile.cpp
 )
 
@@ -113,7 +113,7 @@ target_include_directories(test_checkSizeOfFile PRIVATE ${CMAKE_CURRENT_SOURCE_D
 
 #################################################################################################
 add_executable(test_checkPresenceOfDirective
-    tests/test_checkPresenceOfDirective.cpp
+    unit_tests/test_checkPresenceOfDirective.cpp
     checkPresenceOfDirective.cpp
 )
 
@@ -122,7 +122,7 @@ target_include_directories(test_checkPresenceOfDirective PRIVATE ${CMAKE_CURRENT
 
 #################################################################################################
 add_executable(test_createOutputFile
-    tests/test_createOutputFile.cpp
+    unit_tests/test_createOutputFile.cpp
     createOutputFile.cpp
 )
 
@@ -132,7 +132,7 @@ target_include_directories(test_createOutputFile PRIVATE ${CMAKE_CURRENT_SOURCE_
 #################################################################################################
 
 add_executable(test_generateErrorMessage
-    tests/test_errorMessage.cpp
+    unit_tests/test_errorMessage.cpp
     error.cpp
 )
 
@@ -142,7 +142,7 @@ target_include_directories(test_generateErrorMessage PRIVATE ${CMAKE_CURRENT_SOU
 #################################################################################################
 
 add_executable(test_writingStringConstant
-    tests/test_writingStringConstant.cpp
+    unit_tests/test_writingStringConstant.cpp
     writingStringConstant.cpp
     isQuoteEscaped.cpp
 )
@@ -153,7 +153,7 @@ target_include_directories(test_writingStringConstant PRIVATE ${CMAKE_CURRENT_SO
 #################################################################################################
 
 add_executable(test_writingSymbolicConstant
-    tests/test_writingSymbolicConstant.cpp
+    unit_tests/test_writingSymbolicConstant.cpp
     writingSymbolicConstant.cpp
     isQuoteEscaped.cpp
 )
@@ -164,7 +164,7 @@ target_include_directories(test_writingSymbolicConstant PRIVATE ${CMAKE_CURRENT_
 #################################################################################################
 
 add_executable(test_writingOneLineComment
-    tests/test_writingOneLineComment.cpp
+    unit_tests/test_writingOneLineComment.cpp
     writingOneLineComment.cpp
 )
 
@@ -174,7 +174,7 @@ target_include_directories(test_writingOneLineComment PRIVATE ${CMAKE_CURRENT_SO
 #################################################################################################
 
 add_executable(test_findingEndMultiLineComment
-    tests/test_findingEndMultiLineComment.cpp
+    unit_tests/test_findingEndMultiLineComment.cpp
     findingEndMultiLineComment.cpp
 )
 
@@ -183,7 +183,7 @@ target_include_directories(test_findingEndMultiLineComment PRIVATE ${CMAKE_CURRE
 
 #################################################################################################
 add_executable(test_findingEnteringOtherStatusFlags
-    tests/test_findingEnteringOtherStatusFlags.cpp
+    unit_tests/test_findingEnteringOtherStatusFlags.cpp
     findingEnteringOtherStatusFlags.cpp
     isQuoteEscaped.cpp
     checkPresenceOfDirective.cpp
@@ -195,7 +195,7 @@ target_include_directories(test_findingEnteringOtherStatusFlags PRIVATE ${CMAKE_
 #################################################################################################
 
 add_executable(test_removeMultiLineComment
-    tests/test_removeMultiLineComment.cpp
+    unit_tests/test_removeMultiLineComment.cpp
     removeMultiLineComment.cpp
     checkPresenceOfDirective.cpp
     findingEnteringOtherStatusFlags.cpp

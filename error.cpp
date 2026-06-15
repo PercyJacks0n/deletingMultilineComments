@@ -1,5 +1,6 @@
 #include "Error.h"
 
+// Генерирует строку со списком номеров строк через запятую
 QString Error::generateListLineNumbersExceededCharacterLimit() const
 {
     QString linesStr;
@@ -11,6 +12,7 @@ QString Error::generateListLineNumbersExceededCharacterLimit() const
     return linesStr;
 }
 
+// Генерирует сообщение об ошибке в зависимости от её типа
 QString Error::generateErrorMessage() const
 {
     switch (type)
@@ -36,11 +38,9 @@ QString Error::generateErrorMessage() const
         return "Количество строк " + QString::number(actualCount) + " штук превышает 1000";
 
     case numberCharactersPerLineExceeded:
-
         return "Превышена длина строки 1000 символов в строках:" + generateListLineNumbersExceededCharacterLimit();
 
     default:
         return "Неизвестная ошибка";
     }
 }
-

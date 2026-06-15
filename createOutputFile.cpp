@@ -6,14 +6,15 @@
 #include "ErrorType.h"
 #include <QFile>
 
-void createOutputFile(const QString & content,
-                      const QString & filePath,
-                      QList<Error> & errors)
+// Создаёт выходной файл и записывает в него обработанный код
+void createOutputFile(const QString & content, const QString & filePath, QList<Error> & errors)
 {
     QFile file(filePath);
 
+    // Пытаемся открыть файл для записи
     if (!file.open(QIODevice::WriteOnly))
     {
+        // Если не удалось то добавляем ошибку
         Error error;
         error.type = outputFileCreateError;
         error.errorOutputFileWay = filePath;
@@ -21,8 +22,8 @@ void createOutputFile(const QString & content,
         return;
     }
 
+    // Записываем содержимое и закрываем файл
     QTextStream stream(&file);
     stream << content;
-
     file.close();
 }

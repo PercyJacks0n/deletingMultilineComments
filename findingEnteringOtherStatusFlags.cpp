@@ -8,7 +8,7 @@ void findingEnteringOtherStatusFlags(const QString & inputCode,
                                      QString & result,
                                      LocationFlagInCode & state,
                                      int & countDirective,
-                                     QString & directive)
+                                     const QString & directive)
 {
     int len = inputCode.length();
     if (i >= len) return;

@@ -2,7 +2,7 @@
 #include "Functions.h"
 
 // Проверяет наличие директивы в коде
-void checkPresenceOfDirective(const QString & inputCode, int & i, int & countDirective, QString & directive)
+void checkPresenceOfDirective(const QString & inputCode, int i, int & countDirective, const QString & directive)
 {
     // Проверяем, не вышли ли за пределы строки
     if (i + 1 >= inputCode.length()) return;

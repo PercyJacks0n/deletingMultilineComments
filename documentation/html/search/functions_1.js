@@ -1,0 +1,5 @@
+var searchData=
+[
+  ['findingendmultilinecomment_0',['findingEndMultiLineComment',['../finding_end_multi_line_comment_8cpp.html#aa24b15f8f5092ec51f53e0d923e304d5',1,'findingEndMultiLineComment(const QString &amp;inputCode, int &amp;i, LocationFlagInCode &amp;state):&#160;findingEndMultiLineComment.cpp'],['../_functions_8h.html#aa24b15f8f5092ec51f53e0d923e304d5',1,'findingEndMultiLineComment(const QString &amp;inputCode, int &amp;i, LocationFlagInCode &amp;state):&#160;findingEndMultiLineComment.cpp']]],
+  ['findingenteringotherstatusflags_1',['findingEnteringOtherStatusFlags',['../finding_entering_other_status_flags_8cpp.html#a6558cc2c8fcfd3e9356ba136c7c7237c',1,'findingEnteringOtherStatusFlags(const QString &amp;inputCode, int &amp;i, QString &amp;result, LocationFlagInCode &amp;state, int &amp;countDirective, QString &amp;directive):&#160;findingEnteringOtherStatusFlags.cpp'],['../_functions_8h.html#a6558cc2c8fcfd3e9356ba136c7c7237c',1,'findingEnteringOtherStatusFlags(const QString &amp;inputCode, int &amp;i, QString &amp;result, LocationFlagInCode &amp;state, int &amp;countDirective, QString &amp;directive):&#160;findingEnteringOtherStatusFlags.cpp']]]
+];

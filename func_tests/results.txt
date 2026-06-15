@@ -1,0 +1,179 @@
+ 
+######################################## 
+Functional tests for deletingMultilineComments 
+######################################## 
+ 
+### 01 No comments ### 
+#include <stdio.h>
+int main() {
+    int a = 5;
+    int b = 10;
+    printf("%d %d", a, b);
+    return 0;
+}
+ 
+### 02 Block comment one line ### 
+#include <stdio.h>
+int main() {
+    int a = 5;
+    
+    int b = 10;
+    return 0;
+}
+ 
+### 03 Block comment multiline ### 
+#include <stdio.h>
+int main() {
+    int a = 5;
+    
+    int b = 10;
+    return 0;
+}
+ 
+### 04 Block comment without spaces ### 
+int a=5;int b=10;
+ 
+### 05 Block comment at start ### 
+
+#include <stdio.h>
+int main() { return 0; }
+ 
+### 06 Block comment at end ### 
+#include <stdio.h>
+int main() { return 0; }
+
+ 
+### 07 Block comment between tokens ### 
+inta = 5;
+ 
+### 08 Line comment (remain) ### 
+int a = 5; // this is line comment
+int b = 10;
+ 
+### 09 Comment inside string ### 
+#include <string.h>
+int main() {
+    char *s = "/* not a comment */";
+    return 0;
+}
+ 
+### 10 Comment inside char ### 
+char ch = '/*';
+ 
+### 11 Escaped quote in string ### 
+#include <string.h>
+int main() {
+    char *s = "Shrek said: \"Hello, Fiona!\"";
+    return 0;
+}
+ 
+### 12 Mixed line and block ### 
+// РѕРґРЅ РєРѕРјРјРµРЅС‚
+int a = 5; 
+// РѕРґРЅ РєРѕРјРјРµРЅС‚
+int b = 10;
+
+int c = 15;
+ 
+### 13 Several comments one line ### 
+int a = 5;  int b = 10;  int c = 15;
+ 
+### 14 Empty file ### 
+ 
+### 15 Only comment in file ### 
+
+ 
+### 16 Invalid extension (.txt) ### 
+Обнаружены ошбики:
+
+"Недопустимое расширение файла: txt Разрешены: cpp, c, h"
+ 
+### 17 #define directive ### 
+Обнаружены ошбики:
+
+"Найдена директива #define , количество: 1 штук"
+#include <stdio.h>
+#define MAX 100
+int main() { int a = MAX; return 0; }
+ 
+### 18 Non-existent input file ### 
+Обнаружены ошбики:
+
+"Файл не существует: nonexistent.cpp"
+ 
+### 19 Invalid output path ### 
+Обнаружены ошбики:
+
+"Не удалось создать выходной файл: Z:/nonexistent/folder/out19.cpp"
+ 
+### 20 Too many lines (1001) ### 
+Обнаружены ошбики:
+
+"Количество строк 1006 штук превышает 1000"
+ 
+### 21 Line too long (1001 chars) ### 
+Обнаружены ошбики:
+
+"Превышена длина строки 1000 символов в строках:3"
+ 
+### 22 Empty input path ### 
+Обнаружены ошбики:
+
+"Недопустимое расширение файла:  Разрешены: cpp, c, h"
+ 
+### 23 Empty output path ### 
+QFSFileEngine::open: No file name specified
+Обнаружены ошбики:
+
+"Не удалось создать выходной файл: "
+ 
+### 24 Unclosed comment ### 
+int a = 5;  
+### 25 Two comments in a row ### 
+int a = 5;
+ 
+### 26 English text in comment ### 
+
+int a = 5;
+ 
+### 27 Special chars in comment ### 
+
+int a = 5;
+ 
+### 28 Multiple #define ### 
+Обнаружены ошбики:
+
+"Найдена директива #define , количество: 3 штук"
+#define MAX 100
+#define MIN 0
+#define PI 3.14
+int main() { return 0; }
+ 
+### 29 Very large file (2000 lines) ### 
+Обнаружены ошбики:
+
+"Количество строк 2005 штук превышает 1000"
+ 
+### 30 Comment with tabs and spaces ### 
+int a = 5;
+
+int b = 10;
+
+int c = 15;
+ 
+### 31 Multiple block comments one line ### 
+int a = 5;int b = 10;int c = 15;
+ 
+### 32 Block comment with blank lines ### 
+int a = 5;
+
+int b = 10;
+ 
+### 33 Comment without closing ### 
+ 
+### 34 Comment without opening ### 
+*/ int a = 5;
+ 
+######################################## 
+All tests completed. Check results.txt 
+######################################## 
